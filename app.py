@@ -25,7 +25,13 @@ app.config['SECRET_KEY'] = 'cairocoders-ednalan'
 #database connectivity
 # conn=mysql.connector.connect(host='localhost',port='3306',user='root',password='root',database='register')
 
-conn = pymysql.connect(host='localhost', port=3306, user='root', password='root', database='register')
+conn = pymysql.connect(
+    host=os.environ.get('MYSQLHOST', 'localhost'),
+    port=int(os.environ.get('MYSQLPORT', 3306)),
+    user=os.environ.get('MYSQLUSER', 'root'),
+    password=os.environ.get('MYSQLPASSWORD', 'root'),
+    database=os.environ.get('MYSQLDATABASE', 'register')
+)
 cur = conn.cursor()
 
 # Google recaptcha - site key : 6LdbAx0aAAAAAANl04WHtDbraFMufACHccHbn09L
