@@ -25,6 +25,10 @@ app.config['SECRET_KEY'] = 'cairocoders-ednalan'
 #database connectivity
 # conn=mysql.connector.connect(host='localhost',port='3306',user='root',password='root',database='register')
 
+print("DB HOST:", os.environ.get('MYSQLHOST', 'NOT SET'))
+print("DB PORT:", os.environ.get('MYSQLPORT', 'NOT SET'))
+print("DB USER:", os.environ.get('MYSQLUSER', 'NOT SET'))
+print("DB NAME:", os.environ.get('MYSQLDATABASE', 'NOT SET'))
 conn = pymysql.connect(
     host=os.environ.get('MYSQLHOST', 'localhost'),
     port=int(os.environ.get('MYSQLPORT', 3306)),
