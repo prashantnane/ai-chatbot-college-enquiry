@@ -30,11 +30,11 @@ print("DB PORT:", os.environ.get('MYSQLPORT', 'NOT SET'))
 print("DB USER:", os.environ.get('MYSQLUSER', 'NOT SET'))
 print("DB NAME:", os.environ.get('MYSQLDATABASE', 'NOT SET'))
 conn = pymysql.connect(
-    host=os.environ.get('MYSQLHOST', 'localhost'),
+    host=os.environ.get('MYSQLHOST', 'mysql.railway.internal'),
     port=int(os.environ.get('MYSQLPORT', 3306)),
     user=os.environ.get('MYSQLUSER', 'root'),
-    password=os.environ.get('MYSQLPASSWORD', 'root'),
-    database=os.environ.get('MYSQLDATABASE', 'register')
+    password=os.environ.get('MYSQLPASSWORD', 'KSrOOxrYFHwZjpbXpOyeUvyzojEnVehk'),
+    database=os.environ.get('MYSQLDATABASE', 'railway')
 )
 cur = conn.cursor()
 
