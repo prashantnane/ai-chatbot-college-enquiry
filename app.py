@@ -1,3 +1,7 @@
+import markupsafe
+import flask_recaptcha
+flask_recaptcha.Markup = markupsafe.Markup
+
 from chatbot import chatbot
 from flask import Flask, render_template, request,session,logging,url_for,redirect,flash
 from flask_recaptcha import ReCaptcha
@@ -30,11 +34,11 @@ print("DB PORT:", os.environ.get('MYSQLPORT', 'NOT SET'))
 print("DB USER:", os.environ.get('MYSQLUSER', 'NOT SET'))
 print("DB NAME:", os.environ.get('MYSQLDATABASE', 'NOT SET'))
 conn = pymysql.connect(
-    host=os.environ.get('MYSQLHOST', 'mysql.railway.internal'),
+    host=os.environ.get('MYSQLHOST', 'localhost'),
     port=int(os.environ.get('MYSQLPORT', 3306)),
     user=os.environ.get('MYSQLUSER', 'root'),
-    password=os.environ.get('MYSQLPASSWORD', 'KSrOOxrYFHwZjpbXpOyeUvyzojEnVehk'),
-    database=os.environ.get('MYSQLDATABASE', 'railway')
+    password=os.environ.get('MYSQLPASSWORD', 'root'),
+    database=os.environ.get('MYSQLDATABASE', 'register')
 )
 cur = conn.cursor()
 
