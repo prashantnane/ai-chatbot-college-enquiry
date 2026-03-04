@@ -6,7 +6,7 @@ spacy.load('en_core_web_sm')
 from chatterbot.trainers import ChatterBotCorpusTrainer
 
 # Creating ChatBot Instance
-chatbot = ChatBot('<b>CRCE BOT</b>')
+chatbot = ChatBot('<b>AI BOT</b>')
 
 # nlp = spacy.load("en_core_web_sm")
 
@@ -16,7 +16,7 @@ chatbot = ChatBot(
     logic_adapters=[
         {
             'import_path': 'chatterbot.logic.BestMatch',
-            'default_response': "Hi there, Welcome to Fr. CRCE! 👋 If you need any assistance, I'm always here.Go ahead and write the number of any query. 😃✨<b><br><br>  Which of the following user groups do you belong to? <br><br>1.&emsp;Student's Section Enquiry.</br>2.&emsp;Faculty Section Enquiry. </br>3.&emsp;Parent's Section Enquiry.</br>4.&emsp;Visitor's Section Enquiry.</br><br>",
+            'default_response': "Hi there, Welcome to ICLESMJC! 👋 If you need any assistance, I'm always here.Go ahead and write the number of any query. 😃✨<b><br><br>  Which of the following user groups do you belong to? <br><br>1.&emsp;Student's Section Enquiry.</br>2.&emsp;Faculty Section Enquiry. </br>3.&emsp;Parent's Section Enquiry.</br>4.&emsp;Visitor's Section Enquiry.</br><br>",
             'maximum_similarity_threshold': 0.90
         }
     ],
@@ -53,10 +53,10 @@ conversation = [
 "Thank You for visiting!..",
 
 "What do you do?",
-"I am made to give Information about Fr. CRCE college.",
+"I am made to give Information about ICLESMJC college.",
 
 "What else can you do?",
-"I can help you know more about Fr. CRCE",
+"I can help you know more about ICLESMJC",
     
     "1",
     "<b>STUDENT <br>The following are frequently searched terms related to student . Please select one from the options below : <br> <br> 1.1 Curriculars <br>1.2  Extra-Curriculars<br>1.3  Administrative<br>1.4 Examination <br>1.5 Placements </b>",
